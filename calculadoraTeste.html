@@ -1,0 +1,100 @@
+<div>
+    <input placeholder="digite um numero" id="num1">
+    <input placeholder="digite um numero" id="num2">
+    <button id="soma">Soma</button>
+    <button id="subtracao">Subtrair</button>
+    <button id="multiplicacao"> Multiplicar</button>
+    <button id="divisao"> Dividir</button>
+</div>
+
+
+
+
+<style>
+    body{
+        background-color: aquamarine;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 20px;
+    }
+
+    input, button{
+        background-color: aqua;
+        font-weight: bolder;
+        padding: 0.5rem;
+    }
+
+
+    input::placeholder{
+        font-weight: bolder;
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+
+    button:hover{
+        background-color: aquamarine;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var somar = document.getElementById("soma");
+    var subtracao = document.getElementById("subtracao");
+    var multiplicacao = document.getElementById("multiplicacao");
+    var divisao = document.getElementById("divisao");
+
+    function soma() {
+        var numero1 = parseInt(document.getElementById("num1").value);
+        var numero2 = parseInt(document.getElementById("num2").value);
+        alert("Resultado da soma: " + (numero1 + numero2))
+    }
+
+    function subtrair() {
+        var numero1 = parseInt(document.getElementById("num1").value);
+        var numero2 = parseInt(document.getElementById("num2").value);
+        alert("Resultado da subtração: " + (numero1 - numero2))
+    }
+
+    function multiplicar() {
+        var numero1 = parseInt(document.getElementById("num1").value);
+        var numero2 = parseInt(document.getElementById("num2").value);
+        alert("Resultado da multiplicação: " + (numero1 * numero2));
+    }
+
+    function dividir() {
+        var numero1 = parseInt(document.getElementById("num1").value);
+        var numero2 = parseInt(document.getElementById("num2").value);
+        if (numero2 != 0) {
+            alert("Resultado da divisão: " + (numero1 / numero2));
+        }
+
+        else {
+            alert("Não é possível dividir por zero")
+        }
+
+    }
+
+
+
+    somar.onclick = soma;
+    subtracao.onclick = subtrair;
+    multiplicacao.onclick = multiplicar;
+    divisao.onclick = dividir;
+
+</script>
